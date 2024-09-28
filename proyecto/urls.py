@@ -20,6 +20,6 @@ from Tareas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('Tareas.urls')),  # Incluye las rutas de Tareas
+    path('', include('Tareas.urls')),  # Incluye las rutas de Tareas
     path('', views.home, name='home'),  # Agrega esta línea para la ruta raíz
 ]

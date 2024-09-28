@@ -1,0 +1,26 @@
+<!-- listar_profesores.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Lista de Profesores</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Género</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.cedula }}</td>
+                <td>{{ profesor.nombres }}</td>
+                <td>{{ profesor.apellidos }}</td>
+                <td>{{ profesor.genero }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
